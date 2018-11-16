@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $exhibits = \App\exhibit::all();
+    return view('welcome', compact('exhibits'));
 });
 
 Auth::routes();
