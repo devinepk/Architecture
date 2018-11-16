@@ -19,7 +19,7 @@ Home
   <div class="card-header text-center">
     {{ $exhibit->artist }}
   </div>
-  <img class="card-img-top" src="{!! $exhibit->url !!}" alt="Card image cap">
+  <a href="{!! $exhibit->url !!}"><img class="card-img-top" src="{!! $exhibit->url !!}" alt="Card image cap"></a>
   <div class="card-body">
     <p class="card-text">{{ $exhibit->description }}</p>
     <p class="card-text"><small class="text-muted">Published: {{ $exhibit->year_completed}}</small></p>
