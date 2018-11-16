@@ -20,6 +20,8 @@ class ExhibitsTable extends Migration
       $table->string('artist', 100)->nullable();
       $table->string('url', 250);
       $table->string('description');
+      $table->unsignedInteger('user_id');
+      $table->foreign('user_id')->references('id')->on('users');
       $table->timestamps();
     });
 
@@ -32,6 +34,6 @@ class ExhibitsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('exhibits');
     }
 }
