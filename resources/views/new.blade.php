@@ -3,21 +3,28 @@
 @section('content')
 <div class="container">
 
-<h1>Add A New Piece of Art</h1>
 
 <form class="" method="POST" action="">
   @csrf
   <div class="card mb-2 around">
+    <div class="card-header text-center">
+  Add A New Piece of Art
+  </div>
     <div class="card-body">
-      <div class="form-group">Artwork information
+      <div class="form-group">
         <!-- below is the dropdown of active exhibits -->
-        <input class="form-control mt-2 mb-5 around" name="exhibit" id="exhibit" placeholder="Name your exhibit">
+        <label for="exhibit">Name your exhibit</label>
+        <input class="form-control mt-2 mb-5 around" name="exhibit" id="exhibit">
 
         <!-- this adds the new art info -->
-        <input class="form-control mt-2 mb-5 around" name="year_completed" id="year_completed" placeholder="When was this photo taken?">
-        <input class="form-control mt-2 mb-5 around" name="artist" id="artist" placeholder="Who took the photo?">
-        <input class="form-control mt-2 mb-5 around" name="url" id="url" placeholder="What's the photo url?">
-        <input class="form-control mt-2 mb-5 around" name="description" id="description" placeholder="How would you describe this?">
+        <label for="year_completed">When was this photo taken?</label>
+        <input class="form-control mt-2 mb-5 around" name="year_completed" id="year_completed">
+        <label for="artist1">Who took the photo?</label>
+        <input class="form-control mt-2 mb-5 around" name="artist" id="artist">
+        <label for="url">What's the photo url?</label>
+        <input class="form-control mt-2 mb-5 around" name="url" id="url">
+        <label for="description">How would you describe this?</label>
+        <input class="form-control mt-2 mb-5 around" name="description" id="description">
 
       </div>
     </div>
