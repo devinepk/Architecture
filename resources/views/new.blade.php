@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('title')
+  New Photo
+@endsection
+
+
 @section('content')
 <div class="container">
 
