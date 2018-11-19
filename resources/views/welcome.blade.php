@@ -17,13 +17,16 @@ Home
 
 <div class="card mb-5" >
   <div class="card-header text-center">
-    {{ $exhibit->artist }}
+    <span class="font-weight-bold">Artist/Creator:</span> {{ $exhibit->artist }} |
+    <span class="font-weight-bold">Exhibit:</span> "{{ $exhibit->exhibit }}" |
+    <span class="font-weight-bold">Created:</span> {{ $exhibit->year_completed}}
   </div>
   <a href="{!! $exhibit->url !!}"><img class="card-img-top" src="{!! $exhibit->url !!}" alt="Card image cap"></a>
   <div class="card-body">
-    <p class="card-text mb-0">{{ $exhibit->description }}</p>
-    <p class="card-text mb-0"><small>This art was created on {{ $exhibit->year_completed}}</small></p>
+    <p class="card-text mb-0">Description: {{ $exhibit->description }}</p>
     <p class="card-text mb-0"><small>It was published here on {{ $exhibit->created_at}}</small></p>
+    <p class="card-text mb-0"><small>Image ID: {{ $exhibit->id}} </small></p>
+    <p class="card-text mb-0"><small>Image Link: <a href="{!! $exhibit->url !!}">{{ $exhibit->url }}</a></small></p>
     <p class="card-text"><small><a href="#" class="text-danger">Delete</a></small></p>
   </div>
 </div>
