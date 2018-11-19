@@ -30,7 +30,7 @@ Home
     <form action="/new/{{ $exhibit->id }}" method="POST">
         @csrf
         @method('DELETE')
-      <button class="card-text"><small>Delete</small></button>
+      <button type="button" class="btn btn-danger float-right"><small><i class="fas fa-trash"></i><small></button>
     </form>
   </div>
 </div>
