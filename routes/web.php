@@ -25,3 +25,7 @@ Route::resource('/new', 'PostController')->middleware('auth');
 Route::get('/new', function () {
     return view('new');
 });
+
+Route::get('/editpost', function () {
+    return view('edit');
+});

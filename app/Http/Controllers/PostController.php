@@ -67,7 +67,8 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+      $exhibit = \App\exhibit::find($id);
+      return view('edit', compact('exhibit'));
     }
 
     /**
@@ -79,7 +80,16 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = \App\exhibit::find($id);
+        $post->exhibit = $request->input('exhibit');
+        $post->year_completed = $request->input('year_completed');
+        $post->artist = $request->input('artist');
+        $post->url = $request->input('url');
+        $post->description = $request->input('description');
+        $post->user_id = \Auth::id();
+        $post->save();
+        return redirect("/");
+
     }
 
     /**
