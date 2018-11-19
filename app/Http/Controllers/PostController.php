@@ -13,7 +13,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('new');
+        return view('/');
     }
 
     /**
@@ -88,8 +88,10 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+      $post = \App\exhibit::find($id);
+      $post->delete();
+      return redirect("/");
     }
 }

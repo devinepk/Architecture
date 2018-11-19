@@ -27,7 +27,11 @@ Home
     <p class="card-text mb-0"><small>It was published here on {{ $exhibit->created_at}}</small></p>
     <p class="card-text mb-0"><small>Image ID: {{ $exhibit->id}} </small></p>
     <p class="card-text mb-0"><small>Image Link: <a href="{!! $exhibit->url !!}">{{ $exhibit->url }}</a></small></p>
-    <p class="card-text"><small><a href="#" class="text-danger">Delete</a></small></p>
+    <form action="/new/{{ $exhibit->id }}" method="POST">
+        @csrf
+        @method('DELETE')
+      <button class="card-text"><small>Delete</small></button>
+    </form>
   </div>
 </div>
 

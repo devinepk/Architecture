@@ -21,3 +21,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/new', 'PostController')->middleware('auth');
+
+Route::get('/new', function () {
+    return view('new');
+});
