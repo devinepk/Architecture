@@ -30,13 +30,9 @@ Home
     <form action="/new/{{ $exhibit->id }}" method="POST">
         @csrf
         @method('DELETE')
-      <button type="button" class="btn btn-danger float-right"><small><i class="fas fa-trash"></i><small></button>
+      <button type="button" class="btn btn-danger float-right"><i class="fas fa-trash"></i></button>
     </form>
-    <!-- <form action="/new/{{ $exhibit->id }}/edit" method="POST">
-        @csrf
-        @method('EDIT') -->
-      <a href="/new/{{ $exhibit->id }}/edit" class="btn btn-secondary float-right"><small><i class="fas fa-pen-square"></i><small></a>
-    <!-- </form> -->
+      <a href="/new/{{ $exhibit->id }}/edit" class="btn btn-secondary float-right mr-3"><i class="far fa-edit"></i></a>
   </div>
 </div>
 
